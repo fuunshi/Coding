@@ -15,14 +15,13 @@ int main()
     scanf("%d", &unit);
 
     int temp = 0;       //Temporary Variable
-    if (unit <= 20)
-        temp = 0;
     if (unit > 20 && unit <= 120)
         temp += (unit - 20) * 12;
-    if (unit > 120 && unit <= 220)
-        temp += (unit - 120) * 11;
-    if (unit > 220)
-        temp += (unit - 220) * 10;
+    else if (unit > 120 && unit <= 220)
+        temp += 1200 + (unit - 120) * 11;
+    else if (unit > 220)
+        temp += 2300 + (unit - 220) * 10;
+
     printf("Your billing amount is Rs.%d\n", temp);
     return 0;
 }
