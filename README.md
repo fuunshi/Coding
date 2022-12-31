@@ -1,7 +1,7 @@
 # college-assignments
 Basic level C
 
-Use it as reference
+Feel free to use for reference
 
 ---
 
