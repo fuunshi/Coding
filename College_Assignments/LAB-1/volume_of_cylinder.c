@@ -10,6 +10,6 @@ int main()
     scanf("%d",&h);
     printf("Enter the Radius of the base: ");
     scanf("%d",&r);
-    printf("The Volume of given Cylinder is %2f\n", 2 * pi * r * h);
+    printf("The Volume of given Cylinder is %.2f\n", 2 * pi * r * h);
     return 0;
 }
