@@ -12,11 +12,11 @@ int main()
     x = strlen(a[0]);
     y = strlen(a[1]);
     z = strlen(a[2]);
-    if (x > y && x > z)
-        printf("%s is the longest word.\n", a[0]);
-    else if (y > x && y > z)
-        printf("%s is the longest word.\n", a[1]);
+    if (x < y && x < z)
+        printf("%s is the shortest word.\n", a[0]);
+    else if (y < x && y < z)
+        printf("%s is the shortest word.\n", a[1]);
     else
-        printf("%s is the longest word.\n", a[2]);
+        printf("%s is the shortest word.\n", a[2]);
     return 0;
 }
