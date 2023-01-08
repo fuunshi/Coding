@@ -9,11 +9,8 @@ int main()
     printf("Enter a word: ");
     scanf("%s", a);
     int x = 0;
-    while (a[x] != '\0')
-    {
-        b[x] = a[x];
-        x++;
-    }
+    strcpy(a, b);
+    strrev(b);
     if (strcmpi(a, b) == 0)
         printf("The word is palindrome.\n");
     else
