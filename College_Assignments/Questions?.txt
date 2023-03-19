@@ -70,7 +70,7 @@ LAB-7 (Pointer and Structure)
 4. Create an array of structure to store name,address,salary of 10 persons and display the details of highest paid person.
 5. WAP to show the use of nested structure.
 
-LAB-7 (File Handling)
+LAB-8 (File Handling)
 1. WAP to copy the content of file "tu.txt" into "university.txt".
 2. A data file "number.txt" contains some numbers. WAP to read the numbers and store all even numbers into "even.txt" and all odd numbers into "odd.txt".
 3. Write a program to input a line of text store it in a file and then read from file and display its contents.
