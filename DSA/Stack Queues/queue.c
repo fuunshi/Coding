@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define maxsize 100
+#define maxsize 4
 
 int dataset[maxsize];
 int rear = - 1;
@@ -13,9 +13,9 @@ void display();
 
 int main(){
     int choice;
+    printf("1.Enqueue Operation\n2.Dequeue Operation\n3.Display the Queue\n4.Exit\n");
     while (1)
     {
-        printf("1.Enqueue Operation\n2.Dequeue Operation\n3.Display the Queue\n4.Exit\n");
         printf("Enter your choice of operations : ");
         scanf("%d", &choice);
         switch (choice)
@@ -39,18 +39,17 @@ int main(){
  
 void enqueue()
 {
-    int insert_item;
+    int data;
     if (rear == maxsize - 1)
        printf("Overflow \n");
     else
     {
         if (front == - 1)
-      
-        front = 0;
+            front = 0;
         printf("Element to be inserted in the Queue : ");
-        scanf("%d", &insert_item);
+        scanf("%d", &data);
         rear = rear + 1;
-        dataset[rear] = insert_item;
+        dataset[rear] = data;
     }
 } 
  
@@ -63,7 +62,7 @@ void dequeue()
     }
     else
     {
-        printf("Element deleted from the Queue: %d\n", dataset[front]);
+        printf("%d\n", dataset[front]);
         front = front + 1;
     }
 } 
