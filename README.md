@@ -1,5 +1,5 @@
 # college-assignments
-Basic level C
+Basic level Coding
 
 Feel free to use for reference
 
