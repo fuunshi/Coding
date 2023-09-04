@@ -2,7 +2,7 @@ package Lab_8;
 
 import java.io.*;
 
-class Student {
+class Student implements Serializable{
     private String name;
     private String faculty;
     private int age;

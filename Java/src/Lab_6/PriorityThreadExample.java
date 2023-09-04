@@ -1,37 +1,33 @@
 package Lab_6;
 
-class NumberThread extends Thread {
-    private int start;
-    private int end;
-
-    public NumberThread(int start, int end) {
-        this.start = start;
-        this.end = end;
-    }
-
-    @Override
+class MaxPriorityThread extends Thread {
     public void run() {
-        for (int i = start; i >= end; i--) {
-            System.out.println(Thread.currentThread().getName() + ": " + i);
-            try {
-                Thread.sleep(100); // Just to slow down the output for demonstration
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+        for (int i = 1; i <= 50; i++) {
+            System.out.print(" i: " + i);
+            Thread.yield(); // Optional: Give up the CPU briefly
+        }
+    }
+}
+class MinPriorityThread extends Thread {
+    public void run() {
+        for (int i = 100; i >= 51; i--) {
+            System.out.print(" j: " + i);
+            Thread.yield(); // Optional: Give up the CPU briefly
         }
     }
 }
 
+
 public class PriorityThreadExample {
     public static void main(String[] args) {
-        NumberThread thread1 = new NumberThread(50, 1);
-        NumberThread thread2 = new NumberThread(100, 51);
+        MaxPriorityThread thread1 = new MaxPriorityThread();
+        MinPriorityThread thread2 = new MinPriorityThread();
 
         thread1.setPriority(Thread.MAX_PRIORITY);
         thread2.setPriority(Thread.MIN_PRIORITY);
 
-        thread1.setName("Thread 1");
-        thread2.setName("Thread 2");
+//        thread1.setName("Thread 1");
+//        thread2.setName("Thread 2");
 
         thread1.start();
         thread2.start();

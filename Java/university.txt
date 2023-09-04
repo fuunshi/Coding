@@ -1,0 +1,10 @@
+Samriddhi College,500
+University of Toronto,12000
+College of Idaho,5000
+Harvard University,50000
+St. Xaviers College,4000
+White House Int'l College,120
+College of Bhaktapur,200
+Pashupati Multiple Campus,100
+Bhaktapur Multiple Campus,250
+Pulchowk Campus,499

@@ -19,7 +19,7 @@ public class CollegeData {
             }
 
             // Write college data to a file using FileOutputStream
-            FileOutputStream fileOutputStream = new FileOutputStream("colleges.txt");
+            FileOutputStream fileOutputStream = new FileOutputStream("university.txt");
             BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(fileOutputStream));
 
             for (int i = 0; i < 10; i++) {
@@ -31,7 +31,7 @@ public class CollegeData {
             System.out.println("College data has been written to the file.");
 
             // Read from the file and display colleges with more than 500 students
-            FileInputStream fileInputStream = new FileInputStream("colleges.txt");
+            FileInputStream fileInputStream = new FileInputStream("university.txt");
             BufferedReader fileReader = new BufferedReader(new InputStreamReader(fileInputStream));
 
             System.out.println("Colleges with more than 500 students:");
