@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-1</title>
+</head>
+
+<body>
+
+    <label for="Checker">Year in AD:</label>
+    <input type="number" id="data" name="Checker"><br>
+    <p id="result"></p>
+    <button onclick="check()">Check</button>
+
+    <script>
+        function check() {
+            let year = document.getElementById("data").value;
+            if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)){
+                document.getElementById("result").innerHTML = "The year is Leap year";
+            } else {
+                document.getElementById("result").innerHTML = "The year is not leap year";
+            }
+
+        }
+    </script>
+</body>
+
+</html>
