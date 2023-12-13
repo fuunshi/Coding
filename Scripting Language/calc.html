@@ -1,50 +1,50 @@
-<!DOCTYPE html>
-<html lang="en">
+    <!DOCTYPE html>
+    <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assignment-1</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Assignment-1</title>
+    </head>
 
-<body>
+    <body>
 
-    <label for="num1">Number 1:</label>
-    <input type="number" id="num1" name="num1"><br>
-    <label for="num2">Number 2:</label>
-    <input type="number" id="num2" name="num2"><br>
-    <p id="result"></p>
-    <button onclick="calculateSum()">Sum</button>
-    <button onclick="calculateDiff()">Difference</button>
-    <button onclick="calculateProd()">Product</button>
-    <button onclick="calculateDiv()">Division</button>
+        <label for="num1">Number 1:</label>
+        <input type="number" id="num1" name="num1"><br>
+        <label for="num2">Number 2:</label>
+        <input type="number" id="num2" name="num2"><br>
+        <p id="result"></p>
+        <button onclick="calculateSum()">Sum</button>
+        <button onclick="calculateDiff()">Difference</button>
+        <button onclick="calculateProd()">Product</button>
+        <button onclick="calculateDiv()">Division</button>
 
-    <script>
-        function getData() {
-            let num1 = document.getElementById("num1").value;
-            let num2 = document.getElementById("num2").value;
-            return {
-                num1: parseInt(num1),
-                num2: parseInt(num2),
-            };
-        }
-        function calculateSum() {
-            let data = getData();
-            document.getElementById("result").innerHTML = "The sum is: " + (data.num1 + data.num2);
-        }
-        function calculateDiff(){
-            let data = getData();
-            document.getElementById("result").innerHTML = "The Difference is: " + (data.num1-data.num2);
-        }
-        function calculateProd(){
-            let data = getData();
-            document.getElementById("result").innerHTML = "The product is: " + (data.num1*data.num2);
-        }
-        function calculateDiv(){
-            let data = getData();
-            document.getElementById("result").innerHTML = "The division is: " + (data.num1/data.num2);
-        }
-    </script>
-</body>
+        <script>
+            function getData() {
+                let num1 = document.getElementById("num1").value;
+                let num2 = document.getElementById("num2").value;
+                return {
+                    num1: parseInt(num1),
+                    num2: parseInt(num2),
+                };
+            }
+            function calculateSum() {
+                let data = getData();
+                document.getElementById("result").innerHTML = "The sum is: " + (data.num1 + data.num2);
+            }
+            function calculateDiff(){
+                let data = getData();
+                document.getElementById("result").innerHTML = "The Difference is: " + (data.num1-data.num2);
+            }
+            function calculateProd(){
+                let data = getData();
+                document.getElementById("result").innerHTML = "The product is: " + (data.num1*data.num2);
+            }
+            function calculateDiv(){
+                let data = getData();
+                document.getElementById("result").innerHTML = "The division is: " + (data.num1/data.num2);
+            }
+        </script>
+    </body>
 
-</html>
+    </html>
