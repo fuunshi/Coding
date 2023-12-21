@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = new Array(2)
+        a[0] = "Ram";
+
+        let mobile = {
+            brand:"Samsung",
+            price:"300000",
+            version:"3.12"
+        }
+
+        let student = {
+            name:"Partik Sharma",
+            price:"200",
+            class:"3"
+        }
+
+        for (key in student){
+            document.write("The User Defined Object Value is "+ student [key] + "<br>");       
+        }
+
+        
+        for (key in mobile){
+            document.write("The User Defined Object Value is "+ mobile[key] + "<br>");       
+        }
+        document.write("The User Defined Object Value is "+ mobile.brand + "<br>");
+    </script>
+</body>
+</html>
