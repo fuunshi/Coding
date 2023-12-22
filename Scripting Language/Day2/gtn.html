@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guessing Game</title>
+    <style>
+        #result {
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .correct {
+            color: green;
+        }
+
+        .wrong {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <label for="guess">Guess a number between 1 and 10:</label>
+    <input type="number" id="guess" min="1" max="10">
+    <button onclick="checkGuess()">Check</button>
+    <p id="result"></p>
+
+    <script>
+        function checkGuess() {
+            const randomNumber = Math.floor(Math.random() * 10) + 1; // Generates a random number between 1 and 10
+            const userGuess = parseInt(document.getElementById("guess").value);
+
+            const resultDisplay = document.getElementById("result");
+
+            if (userGuess === randomNumber) {
+                resultDisplay.textContent = "Correct!";
+                resultDisplay.classList.remove("wrong");
+                resultDisplay.classList.add("correct");
+            } else {
+                resultDisplay.textContent = "Wrong!";
+                resultDisplay.classList.remove("correct");
+                resultDisplay.classList.add("wrong");
+            }
+        }
+    </script>
+</body>
+
+</html>

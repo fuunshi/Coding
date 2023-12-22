@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-1</title>
+</head>
+
+<body>
+
+    <label for="data">Number:</label>
+    <input type="text" id="data" name="data"><br>
+    <p id="result"></p>
+    <button onclick="checkPalindrome()">Check Palindrome</button>
+
+    <script>
+        function checkPalindrome() {
+            let data = document.getElementById("data").value;
+            const reversed = data.split('').reverse().join('');
+            
+            if (data === reversed) {
+                document.getElementById("result").innerHTML = "The Number is a Palindrome";
+            } else {
+                document.getElementById("result").innerHTML = "The Number is not a Palindrome";
+            }
+        }
+    </script>
+</body>
+
+</html>

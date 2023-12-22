@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Comparison</title>
+</head>
+
+<body>
+
+    <label for="num1">Enter first number:</label>
+    <input type="number" id="num1"><br><br>
+
+    <label for="num2">Enter second number:</label>
+    <input type="number" id="num2"><br><br>
+
+    <button onclick="computeResult()">Compute</button>
+    <p id="result"></p>
+
+    <script>
+        function computeResult() {
+            const num1 = parseInt(document.getElementById("num1").value);
+            const num2 = parseInt(document.getElementById("num2").value);
+
+            const resultDisplay = document.getElementById("result");
+
+            if (num1 === num2) {
+                const tripleSum = 3 * (num1 + num2);
+                resultDisplay.textContent = `The numbers are the same. Triple their sum: ${tripleSum}`;
+            } else {
+                const sum = num1 + num2;
+                resultDisplay.textContent = `The numbers are different. Sum: ${sum}`;
+            }
+        }
+    </script>
+</body>
+
+</html>
