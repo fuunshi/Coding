@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detect Device</title>
+</head>
+<body>
+    <script>
+        document.write(`
+        Screen width is:${screen.width}<br>
+        Screen height is:${screen.height}<br>
+        Screen available width is:${screen.availWidth}<br>
+        Screen available height is:${screen.availHeight}<br>
+        Screen Color Depth is:${screen.colorDepth}<br>
+        Screen Pixel Depth is:${screen.pixelDepth}<br><br>
+
+        Your href is:${window.location.href}<br>
+        Hostname:${window.location.hostname}<br>
+        Port:${window.location.port}<br>
+        Pathname:${window.location.pathname}<br>
+        Protocol:${window.location.protocol}<br><br>
+        
+        Code Name:${navigator.appCodeName}<br>
+        App Name:${navigator.appName}<br>
+        App Version:${navigator.appVersion}<br>
+        Cookie Check:${navigator.cookieEnabled}<br>
+        Language:${navigator.language}<br>
+        User Agent:${navigator.userAgent}<br>
+        Platform:${navigator.platform}<br>
+        OnLine:${navigator.onLine}<br>
+        `)
+    </script>
+</body>
+</html>
