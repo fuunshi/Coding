@@ -3,6 +3,7 @@ def add():
     author = input("Enter author's name:")
     year = int(input("Enter year published:"))
     books.append({"title":title,"author":author,"year":year})
+    print("Adding successfull!")
 
 def remove():
     title = input("Enter title:")
