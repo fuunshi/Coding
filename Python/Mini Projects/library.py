@@ -7,14 +7,19 @@ def add():
 
 def remove():
     title = input("Enter title:")
+    found = False
 
-    for book in books:
+    for book in books[:]:  # Using a copy of books list to avoid modification during iteration
         if book["title"] == title:
             books.remove(book)
             print(f"{title} has been removed")
-        else:
-            print(f"{title} was not found")
-        return
+            found = True
+
+    if not found:
+        print(f"{title} was not found")
+
+    return
+
 
 def search_title():
     title = input("Enter title:")
