@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        .hidden {
+            display: none;
+            /* Hide the element initially */
+        }
+    </style>
+
+    <title>Hover Change</title>
+</head>
+
+<body>
+    <img class="hidden" src="muhehe.jpeg">
+    <img id="hover" src="notmuhehe.jpeg">
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Your JavaScript code here
+
+            const hiddenElement = document.querySelector(".hidden"); // Selecting the hidden element
+
+            const hoverElement = document.querySelector("#hover");
+            hoverElement.addEventListener('mouseover', (event) => {
+                hiddenElement.style.display = 'block'; // Show the hidden element when #hover is hovered
+                hoverElement.style.display = 'none';
+            });
+            hoverElement.addEventListener('mouseout', (event) => {
+                hiddenElement.style.display = 'none';
+                hoverElement.style.display = 'block';
+            });
+        });
+    </script>
+</body>
+
+</html>
