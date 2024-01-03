@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radio Func</title>
+</head>
+<body>
+    <form>
+        Value: <input type="number" id="valueInput" placeholder="value"><br>
+        Action:<br>
+        <input type="radio" name="compute" value="2">Double<br>
+        <input type="radio" name="compute" value="3">Cube<br>
+    </form>
+    <p id="result"></p>
+    <script>
+        const valueInput = document.getElementById("valueInput");
+        const result = document.getElementById("result");
+
+        function calculateResult(operation) {
+            const value = parseFloat(valueInput.value);
+            let calculatedResult;
+
+            if (operation === 'double') {
+                calculatedResult = value * 2;
+                result.innerHTML = `The double is ${calculatedResult}`;
+            } else if (operation === 'cube') {
+                calculatedResult = value ** 3;
+                result.innerHTML = `The cube is ${calculatedResult}`;
+            }
+        }
+
+        const radios = document.querySelectorAll('input[name="compute"]');
+        radios.forEach(radio => {
+            radio.addEventListener('click', function() {
+                if (this.checked) {
+                    calculateResult(this.value === '2' ? 'double' : 'cube');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
