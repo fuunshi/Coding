@@ -1,0 +1,59 @@
+/* Regular Font */
+@font-face {
+    font-family: 'Montserrat-Black';
+    src: url('../fonts/Montserrat-Black.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Montserrat-Regular';
+    src: url('../fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Montserrat-Thin';
+    src: url('../fonts/Montserrat-Thin.ttf') format('truetype');
+}
+/* Cursive Font */
+@font-face {
+    font-family: 'Cursive';
+    src: url('../fonts/CedarvilleCursive-Regular.ttf') format('truetype');
+}
+
+/* Define CSS variables */
+:root {
+    --text-color: #000000;
+    --bg-color: #ffffff;
+    --custom-font: 'Montserrat-Regular', sans-serif;
+    --custom-thin-font: 'Montserrat-Thin';
+    --cursive-font: 'Cursive';
+}
+
+/* Dark mode styles */
+.dark-mode {
+    --text-color: #ffffff;
+    --bg-color: #000000;
+}
+
+/* Apply styles */
+body {
+    margin: 0;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    font-family: var(--custom-font);
+}
+
+.flex {
+    display: flex;
+}
+.center {
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.nav-links {
+    padding: 0;
+}
+
+.nav-links > a {
+    text-decoration: none;
+    padding: 1% 2%;
+}
