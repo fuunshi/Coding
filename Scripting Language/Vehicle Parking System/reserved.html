@@ -6,19 +6,30 @@
   <title>Parking Spaces</title>
   <style>
     body {
+      margin: 0;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
-      margin: 0;
+      background-color: #f0f0f0; /* Set a background color for the whole page */
+    }
+
+    #parking-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
     }
 
     .parking-space {
-      width: 50px;
-      height: 50px;
-      margin: 5px;
-      display: inline-block;
+      width: 150px; /* Adjust the width as needed */
+      height: 100px;
+      background-color: #8BC34A; /* Default color for open spaces (green) */
       cursor: pointer;
+      border: 1px solid #000; /* Add a border for better visibility */
+    }
+
+    .parking-space.reserved {
+      background-color: #FF5733; /* Color for reserved spaces (red) */
     }
   </style>
 </head>
@@ -26,30 +37,21 @@
 
   <div id="parking-grid">
     <!-- 4 rows with 4 parking spaces each -->
-    <div class="parking-row">
-      <div class="parking-space" onclick="toggleReservation(this)"></div>
-      <div class="parking-space" onclick="toggleReservation(this)"></div>
-      <div class="parking-space" onclick="toggleReservation(this)"></div>
-      <div class="parking-space" onclick="toggleReservation(this)"></div>
-    </div>
-    <div class="parking-row">
-      <div class="parking-space" onclick="toggleReservation(this)"></div>
-      <div class="parking-space" onclick="toggleReservation(this)"></div>
-      <div class="parking-space" onclick="toggleReservation(this)"></div>
-      <div class="parking-space" onclick="toggleReservation(this)"></div>
-    </div>
-    <div class="parking-row">
-      <div class="parking-space" onclick="toggleReservation(this)"></div>
-      <div class="parking-space" onclick="toggleReservation(this)"></div>
-      <div class="parking-space" onclick="toggleReservation(this)"></div>
-      <div class="parking-space" onclick="toggleReservation(this)"></div>
-    </div>
-    <div class="parking-row">
-      <div class="parking-space" onclick="toggleReservation(this)"></div>
-      <div class="parking-space" onclick="toggleReservation(this)"></div>
-      <div class="parking-space" onclick="toggleReservation(this)"></div>
-      <div class="parking-space" onclick="toggleReservation(this)"></div>
-    </div>
+    <div class="parking-space" onclick="toggleReservation(this)"></div>
+    <div class="parking-space" onclick="toggleReservation(this)"></div>
+    <div class="parking-space" onclick="toggleReservation(this)"></div>
+    <div class="parking-space" onclick="toggleReservation(this)"></div>
+    <div class="parking-space" onclick="toggleReservation(this)"></div>
+    <div class="parking-space" onclick="toggleReservation(this)"></div>
+    <div class="parking-space" onclick="toggleReservation(this)"></div>
+    <div class="parking-space" onclick="toggleReservation(this)"></div>
+    <div class="parking-space" onclick="toggleReservation(this)"></div>
+    <div class="parking-space" onclick="toggleReservation(this)"></div>
+    <div class="parking-space" onclick="toggleReservation(this)"></div>
+    <div class="parking-space" onclick="toggleReservation(this)"></div>
+    <div class="parking-space" onclick="toggleReservation(this)"></div>
+    <div class="parking-space" onclick="toggleReservation(this)"></div>
+    <div class="parking-space" onclick="toggleReservation(this)"></div>
   </div>
 
   <script>
