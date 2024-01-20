@@ -1,6 +1,21 @@
 def main():
+    welcome()
+    prompt()
     print(encrypt('hehe', 4))
 
+def welcome():
+    print(f"""
+            ----------------------------------------
+            Hello Welcome To Caesar Cipher In Python
+            ----------------------------------------
+          """)
+    
+def prompt():
+    choice = input("Would you like to encrypt(e) or decrypt(d): ").lower()
+    choice_str = "encrypt" if choice == 'e' else "decrypt"
+    string = input(f"What message would you like to {choice_str}")
+    shift = int(input("What is the shift number: "))
+    return (choice, string, shift)
 
 def encrypt(str, shift):
     encrypted = ""
