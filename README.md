@@ -1,8 +1,4 @@
-# college-assignments
-Basic level Coding
+# Coding
 
-Feel free to use for reference
+### References to basic coding problems on different language models
 
----
-
-Shin.
