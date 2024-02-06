@@ -22,7 +22,7 @@ This is a Python implementation of the Noughts and Crosses game where you can pl
 - Python 3.x
 
 ## Contributors
-- [Your Name](https://github.com/fuunshi)
+- [fuunshi](https://github.com/fuunshi)
 
 ## License
 This project is licensed under the [MIT License](LICENSE).
