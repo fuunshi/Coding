@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="form.css" />
+	</head>
+	<body>
+		<form>
+			<label for="name">Enter name</label>
+			<input type="text" name="name" id="name" />
+			<label for="email">Email</label>
+			<input type="text" name="email" id="email" />
+			<label for="password">Password</label>
+			<input type="password" name="password" id="password" />
+			<button>Submit</button>
+		</form>
+		<script>
+			const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
+			const form = document.querySelector('form');
+			form.addEventListener('submit', (e) => {
+				e.preventDefault();
+				const name = document.getElementById('name').value;
+				const email = document.getElementById('email').value;
+				const password = document.getElementById('password').value;
+				if (!name || !email || !password) {
+					alert('All fields needs to be filled');
+					return;
+				}
+				if (!emailRegex.test(email)) {
+					alert('Email invalid');
+					return;
+				}
+				if (password.length < 8) {
+					alert('Password needs to be 8 or more characters');
+					return;
+				}
+				alert('Valid');
+			});
+		</script>
+	</body>
+</html>

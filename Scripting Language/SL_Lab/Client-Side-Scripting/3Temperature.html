@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<head>
+    <title>Question 3</title>
+</head>
+<body>
+    <div style="text-align: center; margin-top: 50px;">
+        <h2>Temperature Converter</h2>
+        <form id="tempConverter">
+            <label for="celsius">Enter temperature in Celsius:</label><br>
+            <input type="number" id="celsius" name="celsius" required><br><br>
+            <button type="submit">Convert to Fahrenheit</button><br><br>
+            <p id="result"></p>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('tempConverter').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var celsius = parseFloat(document.getElementById('celsius').value);
+            var fahrenheit = (celsius * 9/5) + 32;
+            document.getElementById('result').innerText = celsius + "°C is equal to " + fahrenheit.toFixed(2) + "°F.";
+        });
+    </script>
+</body>
+</html>

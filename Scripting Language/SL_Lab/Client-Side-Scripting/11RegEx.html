@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Regex</title>
+		<link rel="stylesheet" href="form.css" />
+	</head>
+	<body>
+		<form>
+			<label for="email">Email</label>
+			<input type="text" name="email" id="email" />
+			<label for="phone">Mobile Number (9*********)</label>
+			<input type="text" name="phone" id="phone" />
+			<button>Validate</button>
+		</form>
+		<script>
+			const phoneRegex = /^[9]+\d{9}$/g;
+			const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
+			const form = document.querySelector('form');
+			form.addEventListener('submit', (e) => {
+				e.preventDefault();
+				const email = document.getElementById('email').value;
+				const phone = document.getElementById('phone').value;
+				if (!phoneRegex.test(phone)) {
+					alert('Phone number invalid');
+					return;
+				}
+				if (!emailRegex.test(email)) {
+					alert('Email invalid');
+					return;
+				}
+				alert('Valid!');
+			});
+		</script>
+	</body>
+</html>

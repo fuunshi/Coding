@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Array Display</title>
+</head>
+<body>
+    <div>
+        <h2>String Array Elements</h2>
+        <ul id="stringList">
+        </ul>
+    </div>
+
+    <script>
+        var stringArray = ["Apple", "Banana", "Orange", "Grapes", "Pineapple", "Mango", "Strawberry", "Watermelon", "Peach", "Cherry"];
+
+        stringArray.forEach(function(string) {
+            document.getElementById("stringList").innerHTML += "<li>" + string + "</li>";
+        });
+    </script>
+</body>
+</html>

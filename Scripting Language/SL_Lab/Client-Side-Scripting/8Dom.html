@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="form.css" />
+	</head>
+	<body>
+		<nav>
+			<a href="">Home</a>
+			<a href="">About</a>
+			<a href="">Contact</a>
+			<a href="">Mission</a>
+			<a href="">More</a>
+		</nav>
+		<script>
+			const h2 = document.createElement('h2');
+			h2.textContent = 'No of links in the page : ' + document.links.length;
+			document.body.appendChild(h2);
+		</script>
+		<style>
+			nav {
+				margin: 2rem auto;
+				max-width: 500px;
+				display: flex;
+				justify-content: center;
+				gap: 1rem;
+			}
+			nav > a {
+				font-size: 1.4rem;
+			}
+		</style>
+	</body>
+</html>

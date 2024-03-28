@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="form.css" />
+	</head>
+	<body>
+		<div class="container">
+			<h2 class="purple big">The Event on the Document</h2>
+			<h2 id="log" class="purple big"></h2>
+		</div>
+
+		<script>
+			function getEventType(event) {
+				const log = document.getElementById('log');
+				log.textContent = `Event type : ${event.type}`;
+			}
+
+			// Keyboard events
+			document.addEventListener('keydown', getEventType);
+			document.addEventListener('keypress', getEventType);
+			document.addEventListener('keyup', getEventType);
+
+			// Mouse events
+			document.addEventListener('mousedown', getEventType);
+			document.addEventListener('mouseup', getEventType);
+			document.addEventListener('click', getEventType);
+		</script>
+	</body>
+</html>
