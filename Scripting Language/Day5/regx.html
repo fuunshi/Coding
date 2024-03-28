@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex validation</title>
+</head>
+<body>
+    Input Some Value<br>
+    <input type="text" id="textBox">
+    <input type="button" value="submit" onclick="RegexCheck()">
+
+    <script>
+        function RegexCheck(){
+            var pattern = /^Dipendra$/;
+            var txtValue = document.getElementById('textBox').value;
+            if(textBox.test(pattern)){
+                alert("Right");
+            }
+            else {
+                alert("Incorrect");
+            }
+        }
+    </script>
+</body>
+</html>
