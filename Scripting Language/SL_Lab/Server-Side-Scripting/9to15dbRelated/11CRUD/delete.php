@@ -27,7 +27,7 @@
         $conn->close();
             ?>
         </table>
-        <h2>Only firstName and lastName can be changed</h2>
+        <!-- <h2>Only firstName and lastName can be changed</h2> -->
         <form action="" method="post">
             <label for="column">Enter roll No to delete</label>
             <input type="number" name="rollNo" id="rollNo">

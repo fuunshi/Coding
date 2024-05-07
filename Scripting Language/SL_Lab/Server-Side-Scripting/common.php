@@ -39,7 +39,7 @@
             font-size: 2rem;
             color: purple;
         }
-        h1, h2, h3, p{
+        h1, h2, h3,h4, p{
             text-align: center;
         }
         ul{

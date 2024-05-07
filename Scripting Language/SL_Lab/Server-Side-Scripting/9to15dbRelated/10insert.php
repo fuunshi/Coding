@@ -15,7 +15,7 @@
     )";
 
     if ($conn->query($sql)) {
-        echo "<h2>Table MyGuests created successfully</h2>";
+        echo "<h2>Table students created successfully</h2>";
        // Now the insertion
         $sql = "INSERT INTO students (firstName, lastName, rollNo)
                 VALUES ('Jivan', 'kadel', '11')";
