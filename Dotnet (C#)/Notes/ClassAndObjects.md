@@ -343,3 +343,15 @@ class Test {
 3. They cannot refer to "this" or "base" in any way.
 
 ---
+
+**Read-only members:**
+```csharp
+class A {
+    public readonly int m;
+    A (int x) {
+        m = x;
+    }
+}
+```
+
+- Values of readonly member can be set using constructor and modification is not possible later.
