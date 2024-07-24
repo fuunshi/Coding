@@ -1,0 +1,6 @@
+## Lab 3 Questions (Object Oriented Concept & Inheritances)
+
+1. Create a class Employee with the instance variables name, age, salary. Create getters and setters. Create a test class and create an object of Employee class, then set and print the employee details.
+2. Create a class Student with the instance variables name, age, faculty. Create properties for all the fields. Create a test class and create a student object set the details and display the details of the stuident.
+3. WAP to print the area of rectangle by creating a class named "Area" taking the values of its length and breadth as parameters of its constructors and having a method named GetArea() which returns the area of rectangle. Length and breadth of rectangle are entered through the keyboard.
+4. Create a class Person with firstName, lastName, age. Create a parametereized constructor to initialize the varibales and a method void showInfo() to display person details. Create a class Student which is sub class of Person and add the field String faculty Override the method showInfo() to display faculty. Create a class Teacher which is a sub class of Person and add the field double salary. Override the method showInfo() to display salary. Provide a test class

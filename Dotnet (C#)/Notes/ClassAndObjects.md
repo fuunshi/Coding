@@ -355,3 +355,51 @@ class A {
 ```
 
 - Values of readonly member can be set using constructor and modification is not possible later.
+
+--- 
+
+## Use of "base" keyword
+
+1. To call base class constructor from derived class constructor
+2. TO access hidden members of base class from derived class
+
+**Example:**
+```csharp
+using System;
+class Person {
+    string name;
+    int age;
+    public Person(string name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public void ShowInfo() {
+        Console.WriteLine(name + " " + age);
+    }
+}
+
+class Employee:Person {
+    int salary;
+    public Employee (string name, int age, int salary) : base(name, age) {
+        this.salary = salary;
+    }
+    public void ShowSalary() {
+        Console.WriteLine(salary);
+    }
+
+    public void ShowInfo() {        // Over writes the previous show info
+        Console.WriteLine(name + " " + age + " " + salary);
+    }
+
+}
+
+class Example {
+    static void Main() {
+        Employee e = new Employee("John", 25, 50000);
+        e.ShowInfo();
+        e.ShowSalary();
+    }
+}
+
+```
