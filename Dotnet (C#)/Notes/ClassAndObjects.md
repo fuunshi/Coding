@@ -403,3 +403,120 @@ class Example {
 }
 
 ```
+
+---
+
+# Method Overriding
+
+- It is a feature of OOP using which the derived classes can have their own implemenation of the method which is already defined in the base class.
+- In C#, the base class method must be "virtual" method so that it can be overriden and also derived class must use "override" keyword while method overriding.
+- Method name and method signature must be same in both base and derived class.
+- It is also called runtime polymorphism/ dynamic binding/ late binding.
+
+**Example:**
+```csharp
+using System;
+class Animal {
+    public virtual void MakeSound() {
+        Console.WriteLine("Animal is making sound");
+    }
+}
+
+class Dog:Animal {
+    public override void MakeSound() {
+        Console.WriteLine("Dog Barking");
+    }
+}
+
+class Main {
+    static void Main() {
+        Dog d = new Dog();
+        d.MakeSound();
+        Animal a = new Dog();
+        a.MakeSound();
+    }
+}
+
+```
+
+---
+
+## Use of "abstract" keyword
+
+1. To create abstract method
+2. To create abstract class
+
+## Abstract Method
+- It is a method which does not have body.
+- Abstract methods are usually created in the base class. The derived classes create their own implementations of the abstract method.
+- If a class contains one or more abstract methods, the class also must be abstract.
+
+## Abstract Class
+- A class which cannot be instantiated i.e. whose object cannot be created is called abstract class.
+- An abstract class may contain both abstract mehod and concrete method.
+- If a class is abstract, it is not compulsory to have abstract method.
+
+**Example:**
+```csharp
+using System;
+abstract class Animal {
+    public abstract void MakeSound();
+}
+
+class Dog:Animal {
+    public override void MakeSound() {
+        Console.WriteLine("Dog Bhau Bhau");
+    }
+}
+
+class Test {
+    static void Main() {
+        Dog d = new Dog();
+        d.MakeSound();
+    }
+}
+```
+
+## Use of "sealed" keyword
+
+1. To create sealed method
+2. To create sealed class
+
+## Sealed Method
+- A method which cannot be further overridden is called sealed method.
+- A method can be sealed by using the sealed keyword.
+- A method can be sealed only if it is overridden in the derived class.
+- A method can be sealed only if it is virtual or abstract in the base class.
+
+**Example:**
+```csharp
+class A {
+    public virtual void Show() {
+        // Code here
+    }
+}
+class B: A {
+    public sealed void Show() {
+        // Code here
+    }
+}
+
+// Now, the derived classes of B cannot override Show()
+```
+
+## Sealed Class
+
+- A class which cannot be derived/ inherited is called sealed class.
+- A class can be sealed by using the sealed keyword.
+- A class can be sealed only if it is not abstract.
+- A class can be sealed only if it is not inherited from another class.
+
+**Example:**
+```csharp
+sealed class A {
+    // Code here
+}
+class B:A {     // Not allowed
+    // Error: A is sealed and cannot be inherited
+}
+```
