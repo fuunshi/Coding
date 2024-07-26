@@ -520,3 +520,80 @@ class B:A {     // Not allowed
     // Error: A is sealed and cannot be inherited
 }
 ```
+
+---
+
+# Interface
+
+- All members inside interfaceare implicitly public and abstract.
+- A class that implements the inteface must provide the body of members of that interface
+- In C#, we add prefix "I" for interface. [convention]
+
+Difference between class and interface
+
+Class                                                               Interface
+1. Can be intantiated                                           Cannot be intantiated
+2. Can contain fields, constructor and destructor               Cannot containt fields contructor and destructor
+3. All members are implicitly private                           All members are implicitly abstract and private
+4. Members can be "static"                                      Cannot declare "static" members
+5. Cannot achieve multiple inheritance                          Can achieve multiple inheritance
+6. Contains only concrete method if abstract method is needed   ALlmethods are abstract
+class also must be abstract
+
+
+---
+
+# Multiple Inheritance
+
+- It is a type of inheritance in which a derived class inherits features from more than one base class.
+- However, in C# we cannot achieve multiple inheritance using class only
+- For this we need interface
+- There are 2 wayus of achieving multiple inheritace
+
+**Example:**
+```csharp
+interface IHi {
+    void SayHi();
+}
+interface IHello {
+    void SayHello();
+}
+
+class Greetings:IHi, IHello {
+    public void SayHi() {
+        Console.WriteLine("HI");
+    }
+    public void SayHello() {
+        Console.WriteLine("Helo");
+    }
+}
+
+class Test {
+    static void Main() {
+        Greetings g = new Greetings();
+        g.SayHi();
+        g.SayHello();
+    }
+}
+```
+
+```csharp
+class User {
+    string name;
+    int age;
+    public User(string name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+}
+class IDetails {
+    void Show();
+}
+class Test {
+    static void Main() {
+        User cu = new User("bruh", 12)
+        cu.Show();
+    }
+}
+```
+---
