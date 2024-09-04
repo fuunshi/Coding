@@ -52,7 +52,14 @@ def newton_method(func, grad, x0, tol=1e-6, max_iter=100):
     # Main Loop starts here
     iter_count = 1
     while iter_count <= max_iter:
-        # Your code goes here
+        root = x0
+        if abs(grad(root)) <= tol:
+            print("Math error")
+            return x0
+        root = x0 -( func(x0) / grad(x0) )
+        x0 = root
+        if abs(func(root)) < tol:
+            return root
         
         iter_count += 1
 
@@ -68,26 +75,27 @@ if __name__ == "__main__":
     grad = lambda x: 2*x -1
 
     # Uncomment the next two lines to use the 2nd Function
-    #func = lambda x: x**3 - x**2 - 2*x + 1
-    #grad = lambda x: 3*x**2 - 2*x -2
+    func_2 = lambda x: x**3 - x**2 - 2*x + 1
+    grad_2 = lambda x: 3*x**2 - 2*x -2
 
     # Call plot_function to plot graph of the function
-    # Your code goes here
+    plot_function(func, -2, 2)
+    plot_function(func_2, -2, 2)
 
-    x0 = 0  # Initial guess for 1st (change the value as required)
+    x0 = 5  # Initial guess for 1st (change the value as required)
     # Call the Newton's method for 1st root
-    our_root_1 = # Your code goes here
+    our_root_1 = newton_method(func, grad, x0)
 
     # Call SciPy method (reference method) for 1st root
     sp_result_1 = sp.optimize.root(func, x0)
     sp_root_1 = sp_result_1.x.item()
 
     # Call the Newton's method for 2nd root
-    x0 = 0 # Initial guess for 2nd root (change the value as required)
-    our_root_2 = # Your code goes here
+    x0 = 5 # Initial guess for 2nd root (change the value as required)
+    our_root_2 = newton_method(func_2, grad_2, x0)
 
     # Call SciPy method (reference method) for 2nd root
-    sp_result_2 = sp.optimize.root(func_1, x0)
+    sp_result_2 = sp.optimize.root(func_2, x0)
     sp_root_2 = sp_result_2.x.item()
 
 

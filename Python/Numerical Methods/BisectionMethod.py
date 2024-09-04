@@ -19,7 +19,7 @@ def plot_function(func, a, b):
 
     plt.xlabel('x')
     plt.ylabel('y')
-    plt.title('Graph of y = x**2 - x - 1')
+    plt.title('Graph')
     plt.grid(True)
     plt.show()
 
@@ -70,23 +70,24 @@ def bisection_method(func, a, b, tol=1e-6, max_iter=100):
 # Example usage:
 if __name__ == "__main__":
     # Define the function for which the root is to be found
-    func = lambda x: x**2 - x - 1  # First Function
+    func = lambda x: x**2 - x - 1  # First Functionx``
     
     # Uncomment the below line to use the Second Function
-    # func = lambda x: x**3 - x**2 - 2*x + 1  # Second Function
+    func_2 = lambda x: x**3 - x**2 - 2*x + 1  # Second Function
 
     # Call plot_function to plot graph of the function
     # Your code goes here
     plot_function(func, -2, 2)
+    plot_function(func_2, -2, 2)
 
     # Set the interval [a, b] for the search
     a_1 = 1; b_1 = 2;  # For first root (change the values as required)
-    a_2 = -1; b_2 = 0;  # For second root (change the values as required)
+    a_2 = 1; b_2 = 2;  # For second root (change the values as required)
 
 
     # Call the bisection method
     our_root_1 = bisection_method(func, a_1, b_1)
-    our_root_2 = bisection_method(func, a_2, b_2, 10)
+    our_root_2 = bisection_method(func_2, a_2, b_2)
 
     # Call SciPy method root, which we consider as a reference method.
     x0 = (a_1 + b_1)/2
@@ -94,7 +95,7 @@ if __name__ == "__main__":
     sp_root_1 = sp_result_1.x.item()
 
     x0 = (a_2 + b_2)/2
-    sp_result_2 = sp.optimize.root(func, x0)
+    sp_result_2 = sp.optimize.root(func_2, x0)
     sp_root_2 = sp_result_2.x.item()
 
     # Print the result
