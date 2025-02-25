@@ -87,3 +87,26 @@ public void valueChanged(ListSelectionEvent e)
 ```
 
 **Notes**: This selection listener and event are defined under `javax.swing.event` package.
+
+---
+
+1. Built-in/ Library Dialog Box
+
+THese are already available in java.
+Examples:
+- MEssage Dialog
+- Input DIalog
+- Confirm Dialog
+- Color Dialog -> JColorCHoose class is used
+- FIle Dialog -> JFileChooser class is used
+
+2. User defined/ Custom Dialog box
+- Created according to the requirement of user
+- JDialog class is used
+- Its constructs are:-
+    - JDialog(JFrame parent)
+    - JDialog(Jframe parent, boolean isModel)
+    - JDialog(JFrame parent, String title, boolean isModel)
+
+**Note**: IF "isModel" is set false, then we can access the parent application without closing the JDialog.
+Default Layout of JDialog is BorderLayout.
