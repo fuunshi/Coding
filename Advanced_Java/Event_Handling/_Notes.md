@@ -110,3 +110,25 @@ Examples:
 
 **Note**: IF "isModel" is set false, then we can access the parent application without closing the JDialog.
 Default Layout of JDialog is BorderLayout.
+
+## Toggle BUtton
+
+- It is a special type of button that has two distinct states "pressed" ON and "released" OFF. It can be used as a switch
+- JToggleButton class is used
+- Both ActionEvent and ItemEvent occur when it is clicked
+- isSelected() method returns trye if it is selected(ON) otherwise returns false.
+---
+
+|  JComboBox  | JLIst   |
+|-------------|---------|
+|It is used to create a drop down of list| It is used to create a list of box|
+|Only 1 item can be selected. | Multiple items can be selected|
+|Scrollbar is automatically added|Scroll bar should be added manually using JScrollPane class|
+| void setMaximumRowCount(int) method is used to set the number of visible items at a time| void setVIsibleROwCOunt(int) method is used to set the number of items visible at a time|
+|BOth ActionEvent and ItemEvent occur whena list item is selected | LIstSelectionEvent occurs when the list item is selcted.|
+
+---
+
+**Notes:**
+1. Items can be added to JList and JCOmboBOx by passing an array in their constructor or by using arrayaddItem() method.
+2. The selection mode of JList can be controlled by setSelectionMode() method which takes one of these 3 arguments: ListSelectionModel.SINGLE_SELECTION, ListSelectionModel.SINGLE_INTERVAL_SELECTION and ListSelectionModel.MULTIPLE_INTERVAL_SELECTION
