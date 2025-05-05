@@ -1,0 +1,16 @@
+version: '3.7'
+
+services:
+  tomcat:
+    image: tomcat:9-jdk11-openjdk-slim
+    container_name: tomcat-server
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./com:/usr/local/tomcat/webapps
+    networks:
+      - tomcat-network
+
+networks:
+  tomcat-network:
+    driver: bridge
